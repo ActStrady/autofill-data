@@ -31,7 +31,7 @@ class FreemarkerReplaceTest {
         data.put("date", LocalDateTime.now());
         String img = System.getProperty("user.dir") + "/src/main/resources/doc/test.png";
         data.put("img", FreemarkerReplace.getImageString(img));
-        String path = System.getProperty("user.dir") + "/src/main/resources\\doc\\result.doc";
+        String path = System.getProperty("user.dir") + "/src/main/resources/doc/result.doc";
         File file = FreemarkerReplace.fullData(ftl, data);
     }
 }
