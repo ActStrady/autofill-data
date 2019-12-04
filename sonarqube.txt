@@ -1,0 +1,1 @@
+    mvn sonar:sonar -D sonar.projectKey=project -D sonar.host.url=http://localhost:9000 -D sonar.login=1dcb0bf06d283c1b996b42e8efc2d5582df935e1 -D sonar.java.binaries=target/classes

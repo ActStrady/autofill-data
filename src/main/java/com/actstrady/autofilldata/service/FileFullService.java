@@ -24,8 +24,7 @@ import java.util.Objects;
  */
 @Service
 public class FileFullService {
-    public void full(HttpServletResponse response, Map data) throws IOException,
-            TemplateException {
+    public void full(HttpServletResponse response, Map data) throws IOException, TemplateException {
         // 模板文件所在目录
         String ftlPath = Objects.requireNonNull(this.getClass().getResource("/doc/")).getPath();
         // 模板文件
@@ -55,6 +54,6 @@ public class FileFullService {
         inputStream.close();
         outputStream.close();
         // 删除临时文件
-        file.delete();
+        boolean delete = file.delete();
     }
 }

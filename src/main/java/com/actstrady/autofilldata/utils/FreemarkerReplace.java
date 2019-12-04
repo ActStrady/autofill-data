@@ -28,7 +28,7 @@ public class FreemarkerReplace {
         Template template = configuration.getTemplate("test.ftl", "UTF-8");
 
         // 输出文件
-        String file = System.getProperty("user.dir") + "/src/main/resources/doc/result.doc";
+        String file = System.getProperty("user.dir") + "/autofill-data/src/main/resources/doc/result.doc";
         File outFile = new File(file);
         Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile),
                 StandardCharsets.UTF_8), 10240);
@@ -41,7 +41,6 @@ public class FreemarkerReplace {
 
     public static String getImageString(String img) throws IOException {
         byte[] data = null;
-        File file;
         try (InputStream inputStream = new FileInputStream(img)) {
             int count = 0;
             while (count == 0) {
